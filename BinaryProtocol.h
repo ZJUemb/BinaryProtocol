@@ -18,8 +18,8 @@ typedef char MsgType;
 
 typedef struct{
 	MsgType		msgType;
-	int			deviceId;
-	char		key[KEY_SIZE];
+	int		deviceId;
+	char		key[KEY_SIZE+1];
 }__attribute__((packed))LoginPacket;
 
 typedef struct{
@@ -28,8 +28,8 @@ typedef struct{
 
 typedef struct{
 	MsgType		msgType;
-	int			device_id;
-	int			reserved;
+	int		device_id;
+	int		reserved;
 	char		payload[PAYLOAD_SIZE];
 }__attribute__((packed))ReportPacket;
 
@@ -37,7 +37,7 @@ typedef struct{
 
 typedef struct{
 	MsgType		msgType;
-	int			device_id;
+	int		device_id;
 	char		payload[PAYLOAD_SIZE];
 }__attribute__((packed))CtrlPacket;
 typedef struct{
@@ -48,8 +48,8 @@ typedef struct{
 #pragma pack(1)  
 typedef struct{
 	MsgType		msgType;
-	int			deviceId;
-	char		key[KEY_SIZE];
+	int		deviceId;
+	char		key[KEY_SIZE+1];
 }LoginPacket;
 
 typedef struct{
@@ -58,8 +58,8 @@ typedef struct{
 
 typedef struct{
 	MsgType		msgType;
-	int			device_id;
-	int			reserved;
+	int		device_id;
+	int		reserved;
 	char		payload[PAYLOAD_SIZE];
 }ReportPacket;
 
@@ -67,7 +67,7 @@ typedef struct{
 
 typedef struct{
 	MsgType		msgType;
-	int			device_id;
+	int		device_id;
 	char		payload[PAYLOAD_SIZE];
 }CtrlPacket;
 typedef struct{
